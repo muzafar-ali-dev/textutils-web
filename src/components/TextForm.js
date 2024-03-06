@@ -12,6 +12,10 @@ const TextForm = (props) => {
     let newText = text.toLowerCase();
     setText(newText);
   };
+  const handelClearText = () => {
+    let newText = " ";
+    setText(newText);
+  };
   const handelOnChange = (event) => {
     // console.log("handelonChange");
     setText(event.target.value);
@@ -39,6 +43,9 @@ const TextForm = (props) => {
         </Button>
         <Button onClick={handelUplower} className="btn btn-primary mx-2">
           Convert to lowercase
+        </Button>
+        <Button onClick={handelClearText} className="btn btn-primary mx-2">
+          Clear text
         </Button>
       </div>
       <div className="Container mx-2">
