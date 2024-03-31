@@ -16,6 +16,13 @@ const TextForm = (props) => {
     let newText = " ";
     setText(newText);
   };
+
+  const speak = () => {
+    let msg = new SpeechSynthesisUtterance();
+    msg.text = text;
+    window.speechSynthesis.speak(msg);
+  };
+
   const handelOnChange = (event) => {
     // console.log("handelonChange");
     setText(event.target.value);
@@ -46,6 +53,13 @@ const TextForm = (props) => {
         </Button>
         <Button onClick={handelClearText} className="btn btn-primary mx-2">
           Clear text
+        </Button>
+        <Button
+          type="submit"
+          onClick={speak}
+          className="btn btn-warning mx-2 my-2"
+        >
+          Speak
         </Button>
       </div>
       <div className="Container mx-2">
