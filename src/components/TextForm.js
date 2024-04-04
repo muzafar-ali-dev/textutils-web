@@ -28,7 +28,7 @@ const TextForm = (props) => {
     setText(event.target.value);
   };
 
-  const [text, setText] = useState(" ");
+  const [text, setText] = useState("");
 
   return (
     <Container>

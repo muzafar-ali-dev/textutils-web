@@ -7,8 +7,8 @@ const App = () => {
   return (
     <>
       <Naavbar title="TextUtils" aboutText="About US" />
-      {/* <TextForm heading="Enter the text to Analyze Blow" /> */}
-      <About />
+      <TextForm heading="Enter the text to Analyze Blow" />
+      {/* <About /> */}
     </>
   );
 };
